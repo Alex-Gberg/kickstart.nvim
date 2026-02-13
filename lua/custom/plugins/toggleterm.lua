@@ -3,6 +3,9 @@ return {
   version = '*',
   lazy = false, -- Load on startup so the keymaps and global functions are ready
   config = function()
+    require('toggleterm').setup {
+      open_mapping = [[<c-\>]], -- Ctrl-\
+    }
     -- lazygit pop-up
     local Terminal = require('toggleterm.terminal').Terminal
     local lazygit = Terminal:new {
